@@ -1,0 +1,237 @@
+.maincontainer{
+  background-image: linear-gradient(to right, rgb(233, 213, 255), rgb(187, 247, 208));
+  position:fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 1000;
+  background-color: white;
+  
+}
+.HeadContainer{
+  max-width: 80rem;  
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;   
+  padding-right: 1rem; 
+}
+
+@media (min-width: 640px) {  
+  .HeadContainer {
+    padding-left: 1.5rem;   
+    padding-right: 1.5rem; 
+  }
+}
+
+@media (min-width: 1024px) {  
+  .HeadContainer {
+    padding-left: 2rem;  
+    padding-right: 2rem;  
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  align-items: center;
+}
+.logo{
+  font-size: 1.5rem;       
+  line-height: 2rem;      /* 32px */
+  font-weight: 700;
+}
+.navContainer{
+  display: none;
+  font-size: 1.25rem;      /* 20px */
+  line-height: 1.75rem;    /* 28px */
+  align-items: center;
+   
+}
+
+@media (min-width: 768px) { /* md */
+  .navContainer {
+    display: flex;
+  }
+}
+
+.navContainer > * + * {
+  margin-left: 2rem; /* 32px */
+  
+}
+.home{
+  text-decoration: none;
+  font-size: 1.30rem; 
+}
+.home:hover{
+   color: #0891b2;
+   filter: drop-shadow(0px 6px 6px rgba(3, 245, 249, 0.8));
+}
+
+/* member dropdown */
+.memberContainer{
+  position: relative;
+
+}
+.member{
+  font-size: 1.25rem;
+  color: #551A8B;
+}
+.member:hover{
+  color: #0891b2;
+  filter: drop-shadow(0px 6px 6px rgba(3, 245, 249, 0.8));
+}
+
+.onclick{
+  display: flex;
+  align-items: center; 
+  margin-left: 0.25rem;
+  background: none;
+  border: none;
+}
+.onclick:hover{
+  color: #0891b2;
+  filter: drop-shadow(0px 6px 6px rgba(3, 245, 249, 0.8));
+}
+/* .onclick > * + * {
+  margin-left: 0.25rem; /* 4px */
+
+  .membericon{
+  width: 1rem;     
+  height: 1rem;    
+  transform: rotate(0deg);
+  transition: transform 150ms ease-in-out;
+  border: none;
+  }
+  .membericon.open {
+  transform: rotate(180deg);
+}
+.ismemberopen{
+  position: absolute;
+  top: 100%;
+  margin-top: 0.5rem;
+  background-image: linear-gradient(to right, rgb(233, 213, 255), rgb(187, 247, 208));
+  width: 13rem;
+}
+
+.dropdown{
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+.dropdown:hover{
+   color: rgb(8, 145, 178);
+   filter: drop-shadow(0px 6px 6px rgba(3, 245, 249, 0.8));
+}
+.Memberdropdown{
+  display: block;
+  padding-left: 0rem;   /* 16px */
+  padding-right: 0.5rem;  /* 16px */
+  padding-top: 0.5rem;  /* 8px */
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+   color: #551A8B;
+}
+.Memberdropdown:hover{
+  color: #0891b2;
+  filter: drop-shadow(0px 6px 6px rgba(3, 245, 249, 0.8));
+}
+
+ 
+
+
+
+
+/* Mobile menu button */
+
+@media (min-width: 900px) {
+  .menu_container {
+    display: none;
+  }
+}
+
+.button_container{
+  color: rgb(31, 41, 55);
+}
+.button_container:hover{
+  color: rgb(8, 145, 178);
+}
+.button_container:focus{
+  outline: none;
+}
+
+.icons{
+  width: 24px; 
+  height: 24px; 
+  stroke: currentColor;
+  fill: none;
+  /* display: none;   */
+ 
+}
+.icons.open.active,
+.icons.closed:not(.active) {
+  display: block;
+}
+
+.mobileNav{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.mobileNav > * + * {
+  margin-top: 0.25rem;  
+}
+
+ 
+@media (min-width: 900px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+.Monclick{
+  display: block;
+  background: none;
+  text-decoration: none;
+}
+.Monclick:hover{
+  color: #0891b2;
+}
+.MbuttonContainer{
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+  padding-top: 0.5rem;   
+  padding-bottom: 0.5rem;
+  background: none;
+  border: none;
+}
+.MbuttonContainer:hover{
+  color: #0891b2;
+}
+
+
+.mobilemember{
+  font-size: 1rem;
+  color: #551A8B;
+}
+.mobilemember:hover{
+   color: #0891b2;
+}
+.Mismemberopen{
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.2s ease;
+}
+.Mismemberopen.rotate {
+  transform: rotate(180deg);
+}
+
+.Mismemberopen.no-rotate {
+  transform: rotate(0deg);
+}
+
+

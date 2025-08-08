@@ -1,0 +1,13 @@
+.App{
+  background-image: linear-gradient(to right, rgb(233, 213, 255), rgb(187, 247, 208));
+}
+.Bio{
+  width: 95%;
+  align-items: center;
+  justify-content:center;
+  margin-left: 2%;
+  font-size: larger;
+  border: 1px solid black ;
+  padding: 15px;
+  box-shadow: 5px 5px 15px;
+}
