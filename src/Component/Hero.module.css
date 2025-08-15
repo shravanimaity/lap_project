@@ -1,5 +1,6 @@
 .maincontainer{
   width: 100%;
+ 
 }
 .hero_container {
   width: 100%;
@@ -10,6 +11,7 @@
   align-items: center;
   /* position: relative; */
   z-index: 1;
+  padding-top: 20px;
   
 }
 .imageWrapper{
@@ -43,13 +45,12 @@
   font-size: clamp(2.5rem, 2vw, 1.2rem);
   cursor: pointer;
   font-weight: 700;
-  color: rgb(237, 117, 248);
+  color: rgb(193, 32, 251);
   border: none;
   border-radius: 9999px;  
   z-index: 2;
   display: flex;
   justify-content: center;
-   
 }
  
 button:hover{
@@ -65,17 +66,19 @@ button:hover{
 
 }
 
-.dot {
-   
+.dot {   
  position: absolute;
   top: 85%;
   transform: translateY(-50%);
+  font-size: clamp(2.5rem, 2vw, 1.2rem);
   cursor: pointer;
-  font-weight: 700; 
+  font-weight: 700;
+  color: rgb(193, 32, 251);
+  border: none;
+  border-radius: 9999px;  
   z-index: 2;
   display: flex;
   justify-content: center;
-
 }
   
 .dots{

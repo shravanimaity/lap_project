@@ -1,32 +1,86 @@
-import { useState } from 'react'
-import React from 'react'
-import styles from "./App.module.css";
-import Header from './Component/Header'
-import Hero from './Component/Hero'
-import Intro from './Component/Intro'
-import InFo from './Component/InFo'
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Header from './Component/Header';
+import Home from "./Component/Home";
+import Member from './Component/Member';
+import React from 'react';
+import Event from "./Component/Event";
+import Project from "./Component/Project";
+import Research from "./Component/Research";
+import Contact from "./Component/Contact";
+import CurrentMember from "./Component/CurrentMember";
+import Interns from "./Component/Interns";
+import Alumni from "./Component/Alumni";
+import ReadMore from "./Component/ReadMore";
+
+
+
+
+// Layout component to wrap around all routes
+const Layout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet /> {/* This renders the nested route components */}
+    </>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,  // Layout wraps all nested routes
+    children: [
+      {
+        path: "Home",
+        element: <Home />,
+      },
+      {
+        path: "Member",
+        element: <Member />,
+        
+      },
+       {
+         path: "readmore/:name", 
+         element: <ReadMore /> 
+
+      },
+    
+       {
+        path: "Alumni",
+        element: <Alumni />,
+      },
+       {
+        path: "Interns",
+        element: <Interns />,
+      },
+      {
+        path: "Contact",
+        element: <Contact />,
+      },
+      {
+        path: "Research",
+        element: <Research />,
+      },
+      {
+        path: "project",
+        element: < Project />,
+      },
+      {
+        path: "Event",
+        element: <Event />,
+      },
+      {
+        index: true, // Default route for "/"
+        element: <Home />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className={styles.App}>
-      <Header />
-      <Hero />
-      <Intro />
-       <p className={styles.Bio}>     
-        Bio-computational Lab is an interdisciplinary research hub at Jawaharlal Nehru University (JNU) 
-        led by Dr. Saurabh Kumar Sharma. The lab is dedicated to exploring the frontiers of Machine Learning (ML)
-        and Artificial Intelligence (AI) in understanding complex biological and neurological systems.
-        By integrating computational modeling, neural networks, and data-driven approaches, the lab focuses on decoding
-        brain functions, neural communication, and systems biology. With a strong emphasis on mathematical modeling,
-        network theory, and big data analytics, the lab aims to bridge the gap between biology and computation.
-        Research at the Bio-computational Lab supports the development of predictive tools and intelligent systems 
-        for solving real-world biological challenges, fostering innovation in computational biology, neuroscience, and AI-driven diagnostics.
-          </p>
-      <InFo />
-    </div>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App;

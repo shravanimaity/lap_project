@@ -1,0 +1,20 @@
+.Member{
+  background-image: linear-gradient(to right, rgb(233, 213, 255), rgb(187, 247, 208));
+  height: 750px;
+  width: 100%;
+  margin-top: 4rem;
+  padding-top: 10px;
+ 
+}
+ 
+.MemberInfo {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  height: 300px;
+  border: 1px solid black ;
+}

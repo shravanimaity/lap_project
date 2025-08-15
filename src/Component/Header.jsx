@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css"
+import { Link } from "react-router-dom"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
 
           {/* Desktop nav */}
           <nav className={styles.navContainer}>
-            <a href="#" className={styles.home}>Home</a>
+            <Link to="/Home" className={styles.home}>Home</Link>
 
             {/* Members dropdown */}
             <div className={styles.memberContainer}>
@@ -38,17 +39,17 @@ const Header = () => {
               </button>
               {isMembersOpen && (
                 <ul className={styles.ismemberopen} onMouseLeave={() => setIsMembersOpen(!isMembersOpen)} >
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><a href="#" className={styles.Memberdropdown}>Current Members</a></li>
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><a href="#" className={ styles.Memberdropdown}>Alumni</a></li>
-                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><a href="#" className={styles.Memberdropdown}>Interns</a></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member" className={styles.Memberdropdown}>Current Members</Link></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member" className={ styles.Memberdropdown}>Alumni</Link></li>
+                  <li onClick={() => setIsMembersOpen(!isMembersOpen)}><Link to="/Member" className={styles.Memberdropdown}>Interns</Link></li>
                 </ul>
               )}
             </div>
 
-            <a href="#" className={styles.dropdown}>Research</a>
-            <a href="#" className={styles.dropdown}>Event</a>
-            <a href="#" className={styles.dropdown}>Project</a>
-            <a href="#" className={styles.dropdown}>Contact Us</a>
+            <Link to="/Research" className={styles.dropdown}>Research</Link>
+            <Link to="/Event" className={styles.dropdown}>Event</Link>
+            <Link to="/Project" className={styles.dropdown}>Project</Link>
+            <Link to="/contact" className={styles.dropdown}>Contact Us</Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -72,7 +73,7 @@ const Header = () => {
       {/* Mobile nav */}
       {isMenuOpen && (
         <div className={styles.mobileNav}>
-          <a onClick={() => setIsMenuOpen(!isMenuOpen)} href="#" className={styles.Monclick}>Home</a>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Home" className={styles.Monclick}>Home</Link>
 
           {/* Mobile Members dropdown */}
           <div>
@@ -94,17 +95,17 @@ const Header = () => {
             </button>
             {isMembersOpen && (
               <ul className={styles.Mdropdown}>
-                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><a href="#" className={styles.Memberdropdown}>Current Member</a></li>
-                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><a href="#" className={styles.Memberdropdown}>Alumni</a></li>
-                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><a href="#" className={styles.Memberdropdown}>Interns</a></li>
+                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member" className={styles.Memberdropdown}>Current Member</Link></li>
+                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member" className={styles.Memberdropdown}>Alumni</Link></li>
+                <li onClick={() => setIsMenuOpen(!isMenuOpen)} ><Link to="/Member" className={styles.Memberdropdown}>Interns</Link></li>
               </ul>
             )}
           </div>
 
-          <a onClick={() => setIsMenuOpen(!isMenuOpen)} href="#" className={styles.Memberdropdown}>Research</a>
-          <a onClick={() => setIsMenuOpen(!isMenuOpen)} href="#" className={styles.Memberdropdown}>Event</a>
-          <a onClick={() => setIsMenuOpen(!isMenuOpen)} href="#" className={styles.Memberdropdown}>Project</a>
-          <a onClick={() => setIsMenuOpen(!isMenuOpen)} href="#" className={styles.Memberdropdown}>Contact Us</a>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Research" className={styles.Memberdropdown}>Research</Link>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/Event" className={styles.Memberdropdown}>Event</Link>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="Project" className={styles.Memberdropdown}>Project</Link>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="/contact" className={styles.Memberdropdown}>Contact Us</Link>
         </div>
       )}
     </header>

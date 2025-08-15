@@ -10,11 +10,11 @@ const Intro = () => {
       <div className={styles.intro}>
         <h1 className={styles.heading}>Dr. SAURABH KUMAR SHARMA  </h1>
         <h2 className={styles.heading2}>ASSISTANT PROFESSOR</h2>
-        <p className={styles.para}>School of Computer & Systems Sciences
+        <p className={styles.para}><strong>School of Computer & Systems Sciences
           Jawaharlal Nehru University, New Delhi, INDIA
           Ph.D. (Computational Neuroscience), Jawaharlal Nehru University, New Delhi, 2019.
           M.Tech. (Computational & Systems Biology), Jawaharlal Nehru University, New Delhi, 2014.
-          B.Tech. (Computer Science and Engineering), Lovely Professional University, Punjab, 2012.</p>
+          B.Tech. (Computer Science and Engineering), Lovely Professional University, Punjab, 2012.</strong></p>
       </div>
        </div>  
    

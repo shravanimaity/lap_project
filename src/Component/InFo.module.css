@@ -6,11 +6,23 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 } 
+.InfoBox:hover {
+  transform: scale(1.03); /* Slight zoom */
+  box-shadow: 0px 10px 24px rgba(142, 68, 173, 0.4);
+  border-color: #9b59b6;
+}
+.Heading{
+  width: 100%;
+  margin-left: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(38, 163, 119);
+  text-shadow: 2px 2px 4px rgba(57, 225, 65, 0.7); 
+}
  
 .InfoBox{
   margin-top: 2%;
   width: 30%;
-  min-width: 450px;
+  min-width: 320px;
   background-color: rgb(244, 250, 247);
   height: 250px;
   margin-left: 1%;

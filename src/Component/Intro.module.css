@@ -28,13 +28,14 @@
 }
 
 .heading {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
-  color: rgb(33, 177, 126);
+  color: rgb(38, 163, 119);
+  
 }
 
 .heading2 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   color: rgb(33, 177, 126);
 }

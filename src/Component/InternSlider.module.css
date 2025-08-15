@@ -1,0 +1,93 @@
+.cardsliderContainer{
+    width:90%;
+    margin: auto;
+    height: auto;
+    /* background-color: aquamarine; */
+      
+}
+.currentmember{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  color: rgb(38, 163, 119);
+  text-shadow: 2px 2px 4px rgba(57, 225, 65, 0.7); 
+  
+}
+.cardContainer{
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}  
+
+.slick-list {
+  margin: 0 -10px;  
+}
+  
+  .cardBox{
+    background-color: rgb(244, 239, 239);
+    height: 450px;
+    color: black;
+    border-radius: 1.5rem;
+    max-width: 380px; 
+    box-shadow: 4px 4px 8px;
+    justify-content: space-between;
+    margin-left: 6%;
+    transform-style: preserve-3d;
+    animation: rotate 15s infinite linear;
+    
+    
+  }
+  .cardBox:hover{
+    box-shadow: 10px 10px 10px rgb(244, 239, 239);
+     
+  }
+  .imageBox{
+  height: 14rem;               
+  border-top-left-radius: 0.75rem;   
+  border-top-right-radius: 0.75rem;
+  background-color: #9496f5;  
+  display: flex;              
+  justify-content: center;   
+  align-items: center; 
+  perspective: 100px; 
+  }
+  .image{
+  height: 13rem;      
+  width: 13rem;
+  border-radius: 9999px;
+  }
+  .image:hover{
+    transform: translateZ(10px);
+  }
+  .textBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 16px; */
+  }
+  .Name{
+   font-size: x-large;
+   font-weight: 900;
+
+  }
+  .about{
+    font-weight: 500;
+    margin-top: 0;
+    margin-left: 10%;
+    
+  }
+  .readButton{
+    margin-top: 8%;
+    background-color: rgb(196, 155, 225);
+    color: white;
+    font-size: large;
+    padding: 10px 4px 10px 4px;
+    border-radius: 12px;
+    border: none;
+  }
