@@ -11,6 +11,7 @@ import CurrentMember from "./Component/CurrentMember";
 import Interns from "./Component/Interns";
 import Alumni from "./Component/Alumni";
 import ReadMore from "./Component/ReadMore";
+import Footer from "./Component/Footer";
 
 
 
