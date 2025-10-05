@@ -11,12 +11,13 @@ import CurrentMember from "./Component/CurrentMember";
 import Alumni from "./Component/Alumni";
 import Login from "./Component/Login";
 import About from "./Component/About";
-import CurrentmemberSlider from "./Component/CurrentmemberSlider";
 import MemberDetail from "./Component/MemberDetail";
 
-
-
-
+import { AuthProvider } from "./Component/context/AuthContext";
+import ProtectedRoute from "./Component/ProtectedRoute";
+import UploadAchievement from "./Component/UploadAchievement";
+import AdminDashboard from "./Component/AdminDashboard";
+import ErrorPage from "./Component/ErrorPage";   // updated error page
 
 // Layout component to wrap around all routes
 const Layout = () => {
@@ -31,7 +32,6 @@ const Layout = () => {
 const MemberLayout = () => {
   return (
     <div>
-
       <Outlet />
     </div>
   );
@@ -40,45 +40,46 @@ const MemberLayout = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,  // Layout wraps all nested routes
+    element: <Layout />,
+    errorElement: <ErrorPage />, // ✅ handles errors & 404s
     children: [
-      {path: "Home", element: <Home />,},
-      {path: "Login", element: <Login />,},
+      { path: "Home", element: <Home /> },
+      { path: "Login", element: <Login /> },
+
       {
         path: "Member",
         element: <MemberLayout />,
         children: [
-          { path: "Current Member",element: <CurrentMember />, },
-          { path: "Alumni",element: <Alumni />, },
-          { path: "Interns", element: <Interns />, },
-        ]
+          { path: "current-members", element: <CurrentMember /> },
+          { path: "alumni", element: <Alumni /> },
+          { path: "interns", element: <Interns /> },
+        ],
       },
-       
+
+      { path: "member/:type/:id", element: <MemberDetail /> },
+      { path: "Contact", element: <Contact /> },
+      { path: "Research", element: <Research /> },
+      { path: "project", element: <Project /> },
+      { path: "Event", element: <Event /> },
 
       {
-        path: "member/:type/:id", // type = current-members | alumni | interns
-        element: <MemberDetail />,
+        element: <ProtectedRoute />,
+        children: [
+          { path: "admin/upload/:memberId", element: <UploadAchievement /> },
+          { path: "admin-dashboard", element: <AdminDashboard /> },
+        ],
       },
 
-      // { path: "More",element: <CurrentMember /> },
-      // { path: "Read More",element: <Alumni /> },
-      // { path: "/readMore/:name", element: <ReadMore /> },
-      // { path: "/About/:name",  element: <About /> },
-
-
-      { path: "Contact", element: <Contact />, },
-      { path: "Research", element: <Research />, },
-      { path: "project", element: < Project />, },
-      { path: "Event", element: <Event />, },
-
-      { index: true, element: <Home />, },
+      { index: true, element: <Home /> },
     ],
   },
 ]);
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   );
 }
 
